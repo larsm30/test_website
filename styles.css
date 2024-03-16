@@ -40,11 +40,6 @@ main {
     padding-bottom: 15%;
 }
 
-.Subject .roundImage{
-    border-radius: 100%;
-    
-}
-
 .shopItemContainer{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
