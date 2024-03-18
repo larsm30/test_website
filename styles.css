@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-decoration:none; 
+    color: #333;
+    margin: 0;
+    scroll-behavior: smooth;
+    
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding-top: 1%;
+    padding-bottom: 0%;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.WebsiteTitle{
+    font-size: x-large;
+    font-weight: bold;
+    width: 100%;
+}
+
+.ondertTitel{
+    font-size: large;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+}
+
+
+main {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+}
+
+.webShopContainer{
+    width: 60%;
+
+}
+.Subject{
+    padding-bottom: 15%;
+}
+
+.shopItemContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-rows: repeat(auto-fill,minmax(120px, 1fr));
+    border: 0.2px solid #333;
+    align-content: center;
+    align-items: center;
+}
+
+.shopItem{
+    margin: 10px;
+    padding: 2%;
+    border: 1px solid #333;
+    height: 300px;
+    width: 180px;
+    text-align: left;
+    padding: 1%;
+}
+
+.itemPicture{
+    width: 100%;
+    height: 80%;
+}
+
+.AddButton{
+    height: fit-content;
+}
+
+.cartContainer{
+    margin: 20px;
+    width: 40%;
+    height: fit-content;
+    min-height: min-content;
+    border: 1px solid #333;
+}
+
+.itemPictureCart{
+    width: 15%;
+    margin-left: 2%;
+}
+
+.Quantity{
+    width: 8%;
+}
+.cartRow {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.itemPictureCart, .itemTitleCart,.itemPriceCart, .Quantity, .deleteButton{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2%;
+    margin-right: 2%;
+}
