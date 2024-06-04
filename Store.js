@@ -23,6 +23,7 @@ function CheckInouts(){
         }
         else{
             input.style.display = "inline";
+            input.style.opacity = 1;
         }
         input.addEventListener('change',QuantityChanged)
     }
