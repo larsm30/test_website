@@ -18,7 +18,7 @@ function CheckInouts(){
     var quantityInputs = document.getElementsByClassName('Quantity')
     for (var i = 0 ; i < quantityInputs.length ; i++){
         var input = quantityInputs[i]
-        if(currentPath !== "https://larsm30.github.io/test_website/"){
+        if(currentPath !== "/test_website/Paypage.html"){
             input.style.display = "none";
         }
         else{
