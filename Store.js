@@ -1,9 +1,11 @@
 
-
-loadCartRows()
-
 var currentPath = window.location.pathname;
 console.log(currentPath)
+if (currentPath !== '/clickedProduct.html'){
+    loadCartRows();
+}
+
+
 
 var deleteButtons = document.getElementsByClassName('deleteButton')
 for (var i = 0 ; i < deleteButtons.length ; i++){
@@ -18,12 +20,11 @@ function CheckInouts(){
     var quantityInputs = document.getElementsByClassName('Quantity')
     for (var i = 0 ; i < quantityInputs.length ; i++){
         var input = quantityInputs[i]
-        if(currentPath !== "/test_website/Paypage.html"){
+        if(currentPath !== "/Paypage.html"){
             input.style.display = "none";
         }
         else{
             input.style.display = "inline";
-            input.style.opacity = 1;
         }
         input.addEventListener('change',QuantityChanged)
     }
@@ -68,7 +69,7 @@ function removeItemFromCart(event){
 
 function updateCartTotal(){
     var CartRowContainer = document.getElementsByClassName('cartRowContainer')[0]
-    var CartRows = CartRowContainer.getElementsByClassName('cartRow')
+    var CartRows = CartRowContainer.getElementsByClassName('cartRow');
     total = 0
     for(var i = 0; i < CartRows.length;i++){
         var cartRow = CartRows[i]
@@ -129,3 +130,68 @@ function loadCartRows() {
     }
 }
 
+
+
+
+function clickedProduct(product){
+    const picture = product.children[0].src;
+    const titel = product.children[1].innerText;
+    const prijs = product.children[2].innerText;
+    const informatie = product.children[3].dataset.tekst;
+    localStorage.setItem('picturesrc', picture);
+    localStorage.setItem('titel', titel);
+    localStorage.setItem('prijs', prijs);
+    localStorage.setItem('informatie', informatie);
+    window.location.href = "/clickedProduct.html";
+}
+
+if (currentPath == '/clickedProduct.html'){
+    clickedProductPage();
+}
+
+function clickedProductPage(){
+    picturesrc =localStorage.getItem('picturesrc');
+    titel = localStorage.getItem('titel');
+    prijs =localStorage.getItem('prijs');
+    info = localStorage.getItem('informatie');
+    console.log(picturesrc)
+    console.log(titel)
+    console.log(prijs)
+    console.log(info)
+    var imagediv = document.getElementsByClassName('ItemImage')[0];
+    var informationdiv = document.getElementsByClassName('Information')[0];
+    var titeldiv = document.getElementsByClassName('titelClickedProduct')[0];
+    var prijsdiv = document.getElementsByClassName('prijsdiv')[0];
+    
+    titeldiv.innerText = String(titel);
+    informationdiv.innerText = String(info);
+    imagediv.src = picturesrc;
+    prijsdiv.innerText = " prijs: " + String(prijs);
+}
+
+function ReturnPage(){
+    history.back();
+}
+
+
+
+
+function goToPayPage(){
+    var CartRowContainer = document.getElementsByClassName('cartRowContainer')[0];
+    var CartRows = CartRowContainer.getElementsByClassName('cartRow')
+    if(CartRows.length == 0){
+        alert("uw winkelmand is leeg");
+        return;
+    }
+    window.location.href = "/Paypage.html";
+}
+
+bestelButtonClicked
+function bestelButtonClicked(){
+    var CartRowContainer = document.getElementsByClassName('cartRowContainer')[0];
+    var CartRows = CartRowContainer.getElementsByClassName('cartRow')
+    if(CartRows.length == 0){
+        alert("uw winkelmand is leeg");
+        return;
+    }
+}

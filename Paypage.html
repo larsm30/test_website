@@ -7,7 +7,8 @@
     <script src="Store.js" async></script>
     <title>Document</title>
 </head>
-<body><form>
+<body>
+    <form>
     <main>
         <img src="Pictures/Image_text.jpg" class="frontPagePicture">
         <main>
@@ -23,13 +24,13 @@
             <input class="email" type="email" placeholder="john@gmail.com" required >
         </div>
 
-    <div class="cartContainer">
-        <h3> Winkelmandje</h3>
-        <div class="cartRowContainer">
+        <div class="cartContainer">
+            <h3 class="carttitel"> Winkelmandje</h3>
+            <div class="cartRowContainer">
+            </div>
+            <div class="totalPrice">totaal : 0€</div>
+            <button type="submit" class="bestelButton" onclick="bestelButtonClicked()"> Bestel</button>
         </div>
-        <div class="totalPrice">totaal : 0€</div>
-        <button type="submit" class="bestelButton"> Bestel</button>
-    </div>
     </form>
 </body>
 </html>

@@ -58,6 +58,12 @@ body {
     width: 20%;
 
 }
+.carttitel{
+    align-self: center;
+    margin-left: 48%;
+}
+
+
 
 .bestelButton, .totalPrice{
     display: inline-block;

@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d3e4eb;
+    text-decoration:none; 
+    color: #333;
+    margin: 1%;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+.returnButton{
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    border-radius: 0%;
+    border: 1px solid #333;
+}
+
+.ItemImage{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    max-width: 50%;
+    height: 70%;
+}
+
+.ItemOmschrijving{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    width: 30%;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.titel, .Information, .prijsdiv{
+    margin: 2%;
+}
+

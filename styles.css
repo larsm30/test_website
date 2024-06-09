@@ -8,6 +8,13 @@ body {
     
 }
 
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+
+
 
 header {
     text-align: center;
@@ -53,8 +60,9 @@ main {
     width: 70%;
 
 }
+
 .Subject{
-    padding-bottom: 15%;
+    padding-bottom: 1%;
 }
 
 .shopItemContainer{
