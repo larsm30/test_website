@@ -1,7 +1,9 @@
 
 var currentPath = window.location.pathname;
+var basePath = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+
 console.log(currentPath)
-if (currentPath !== '/clickedProduct.html'){
+if (currentPath !== '${basePath}clickedProduct.html'){
     loadCartRows();
 }
 
@@ -20,7 +22,7 @@ function CheckInouts(){
     var quantityInputs = document.getElementsByClassName('Quantity')
     for (var i = 0 ; i < quantityInputs.length ; i++){
         var input = quantityInputs[i]
-        if(currentPath !== "/Paypage.html"){
+        if(currentPath !== "${basePath}Paypage.html"){
             input.style.display = "none";
         }
         else{
@@ -142,10 +144,10 @@ function clickedProduct(product){
     localStorage.setItem('titel', titel);
     localStorage.setItem('prijs', prijs);
     localStorage.setItem('informatie', informatie);
-    window.location.href = "/clickedProduct.html";
+    window.location.href = "${basePath}clickedProduct.html";
 }
 
-if (currentPath == '/clickedProduct.html'){
+if (currentPath == '${basePath}clickedProduct.html'){
     clickedProductPage();
 }
 
@@ -183,7 +185,7 @@ function goToPayPage(){
         alert("uw winkelmand is leeg");
         return;
     }
-    window.location.href = "/Paypage.html";
+    window.location.href = "${basePath}Paypage.html";
 }
 
 bestelButtonClicked
