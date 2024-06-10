@@ -3,7 +3,7 @@ var currentPath = window.location.pathname;
 
 
 console.log(currentPath)
-if (currentPath !== 'https://larsm30.github.io/test_website/clickedProduct.html'){
+if (currentPath !== '/test_website/clickedProduct.html'){
     loadCartRows();
 }
 
@@ -22,7 +22,7 @@ function CheckInouts(){
     var quantityInputs = document.getElementsByClassName('Quantity')
     for (var i = 0 ; i < quantityInputs.length ; i++){
         var input = quantityInputs[i]
-        if(currentPath !== 'https://larsm30.github.io/test_website/Paypage.html'){
+        if(currentPath !== '/test_website/Paypage.html'){
             input.style.display = "none";
         }
         else{
@@ -147,7 +147,7 @@ function clickedProduct(product){
     window.location.href = 'https://larsm30.github.io/test_website/clickedProduct.html';
 }
 
-if (currentPath == 'https://larsm30.github.io/test_website/clickedProduct.html'){
+if (currentPath == '/test_website/clickedProduct.html'){
     clickedProductPage();
 }
 
