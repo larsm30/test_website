@@ -1,9 +1,9 @@
 
 var currentPath = window.location.pathname;
-var basePath = "https://larsm30.github.io/test_website";
+
 
 console.log(currentPath)
-if (currentPath !== basePath + '/clickedProduct.html'){
+if (currentPath !== 'https://larsm30.github.io/test_website/clickedProduct.html'){
     loadCartRows();
 }
 
@@ -22,7 +22,7 @@ function CheckInouts(){
     var quantityInputs = document.getElementsByClassName('Quantity')
     for (var i = 0 ; i < quantityInputs.length ; i++){
         var input = quantityInputs[i]
-        if(currentPath !== basePath + '/Paypage.html"){
+        if(currentPath !== 'https://larsm30.github.io/test_website/Paypage.html'){
             input.style.display = "none";
         }
         else{
@@ -144,10 +144,10 @@ function clickedProduct(product){
     localStorage.setItem('titel', titel);
     localStorage.setItem('prijs', prijs);
     localStorage.setItem('informatie', informatie);
-    window.location.href = basePath + '/clickedProduct.html";
+    window.location.href = 'https://larsm30.github.io/test_website/clickedProduct.html';
 }
 
-if (currentPath == basePath + '/clickedProduct.html"){
+if (currentPath == 'https://larsm30.github.io/test_website/clickedProduct.html'){
     clickedProductPage();
 }
 
@@ -185,7 +185,7 @@ function goToPayPage(){
         alert("uw winkelmand is leeg");
         return;
     }
-    window.location.href = basePath + '/Paypage.html";
+    window.location.href = 'https://larsm30.github.io/test_website/Paypage.html';
 }
 
 bestelButtonClicked
