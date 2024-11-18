@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    scroll-behavior: smooth;
+    display: flex;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.mainHeader {
+    position: absolute;
+    margin-top: 1%;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    border-bottom: #333 0.5px solid;
+    border-top: #333 0.5px solid;
+}
+
+
+.wensAmbulancePicture {
+    position: relative;
+    width: 6%;
+}
+
+
+.PictureTitel {
+    position: relative;
+    top: 2%;
+    width: 100%;
+    margin-right: 50%;
+}
+
+
+.linkContainer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1%;
+    width: max-content;
+}
+
+
+.ondertTitel {
+    display: flex;
+    font-size: large;
+    width: max-content;
+    margin-right: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.uitlegContainer {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+
+.uitlegBackgroundColor {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+
+.frontPagePicture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.tekstContainer {
+    z-index: 2;
+    position: absolute; 
+    color: rgb(255, 255, 255);
+    width: 60%;
+    height: max-content;
+    border: #333 solid 1px;
+    right: 20%;
+    top: 2%;
+}
+
+
+.uitlegTitel {
+    position: absolute; 
+    text-align: center;
+    top: 5%;
+    width: 100%;
+    font-size: xx-large;
+}
+
+
+.uitlegLine{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+}
+
+
+.uitlegTextBegin{
+    margin: 2%;
+    margin-top: 18%;
+    font-size: large;
+
+}
+
+
+.uitlegText{
+    margin: 2%;
+    font-size: large;
+}
