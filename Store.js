@@ -1,9 +1,9 @@
-
+var githubnaam = "/test_website";
 var currentPath = window.location.pathname;
 console.log(currentPath)
 
 
-if (currentPath !== '/clickedProduct.html'){
+if (currentPath !== githubnaam + '/clickedProduct.html'){
     loadCartRows();
 }
 
@@ -21,7 +21,7 @@ function CheckInouts(){
     var quantityInputs = document.getElementsByClassName('Quantity')
     for (var i = 0 ; i < quantityInputs.length ; i++){
         var input = quantityInputs[i]
-        if(currentPath !== "/Paypage.html"){
+        if(currentPath !== githubnaam + "/Paypage.html"){
             input.style.display = "none";
         }
         else{
@@ -156,11 +156,11 @@ function clickedProduct(product){
     localStorage.setItem('titel', titel);
     localStorage.setItem('prijs', prijs);
     localStorage.setItem('informatie', informatie);
-    window.location.href = "/clickedProduct.html";
+    window.location.href = githubnaam + "/clickedProduct.html";
 }
 
 
-if (currentPath == '/clickedProduct.html'){
+if (currentPath == githubnaam + '/clickedProduct.html'){
     clickedProductPage();
 }
 
@@ -198,7 +198,7 @@ function goToPayPage(){
         alert("uw winkelmand is leeg");
         return;
     }
-    window.location.href = "/Paypage.html";
+    window.location.href = githubnaam + "/Paypage.html";
 }
 
 
