@@ -1,4 +1,4 @@
-var githubnaam = "/test_website";
+var githubnaam = "https://larsm30.github.io/test_website";
 var currentPath = window.location.pathname;
 console.log(currentPath)
 
